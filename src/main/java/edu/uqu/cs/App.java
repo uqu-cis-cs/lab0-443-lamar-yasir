@@ -3,14 +3,33 @@ package edu.uqu.cs;
  * Lab 0 
  * CS 1312
  */
-
+import java.util.Scanner;
 /*
 * Make sure to complete and submit your lab
 */
 
 
 public class App{
+public static void twisters() {
 
+        for (int i = 1; i <= 110; i++) {
+
+            if (i % 2 == 0) {
+                System.out.print("Tweetle");
+
+                if (i % 4 == 0) {
+                    System.out.print("Beetle");
+                }
+
+                if (i % 6 == 0) {
+                    System.out.print("Poodle");
+                }
+            }
+            else {
+                System.out.print(" " + i + " ");
+            }
+        }
+}
 /**  
 * Complete method "twisters" definition below. The method prints all numbers from 1 to 110, 11 numbers per line. 
 * Also, it does the following:
@@ -42,9 +61,67 @@ public class App{
 * Output: 2255464228626
 *
 */
+public static void phoneKeypad(String text) {
+
+          String result = "";
+        
+        // loop for each char in the text
+        for (char ch : text.toUpperCase().toCharArray()) {
+            // switch case for each 3 letters
+            switch (ch) {
+                case 'A':
+                case 'B':
+                case 'C':
+                    result += "2";
+                    break;
+                case 'D':
+                case 'E':
+                case 'F':
+                    result += "3";
+                    break;
+                case 'G':
+                case 'H':
+                case 'I':
+                    result += "4";
+                    break;
+                case 'J':
+                case 'K':
+                case 'L':
+                    result += "5";
+                    break;
+                case 'M':
+                case 'N':
+                case 'O':
+                    result += "6";
+                    break;
+                case 'P':
+                case 'Q':
+                case 'R':
+                case 'S':
+                    result += "7";
+                    break;
+                case 'T':
+                case 'U':
+                case 'V':
+                    result += "8";
+                    break;
+                case 'W':
+                case 'X':
+                case 'Y':
+                case 'Z':
+                    result += "9";
+                    break;
+            }
+        }
+
+        System.out.println(result);
+    }
  
     public static void main(String [] args) {
-        
+        twisters();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string >> ");
+        phoneKeypad(scanner.nextLine());
 
         /* Write your code here */
      
